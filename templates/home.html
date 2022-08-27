@@ -1,0 +1,86 @@
+{% extends "base.html" %} {% block head %} <title>Editit</title>{% endblock %}
+{% block bodyout%}
+
+<nav class="navbar navbar-light mb-2 py-4">
+  <a class="navbar-brand" href="/home">
+    <img
+      src="https://i.ibb.co/dGx87VT/logozoom.png"
+      width="100"
+      height="45"
+      class="d-inline-block align-top mx-2"
+      alt=""
+    />
+    <span class="h1">Editit</span>
+  </a>
+</nav>
+{%endblock%} {% block body %}
+
+<div class="mt-5">
+  <div class="row">
+    <div class="col-lg-4 col-md-6 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Low Light Enhancement</h5>
+          <p class="card-text">
+            Uses dark and bright channel prior to give you bright image , takes
+            time to process.
+          </p>
+          <a href="/lle/upload-image" class="btn btn-primary">Go</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">GrayScale</h5>
+          <p class="card-text">Just a classic grayscale converter</p>
+          <a href="/grayscale/upload-image" class="btn btn-primary">Go</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Grab Cut</h5>
+          <p class="card-text">
+            Uses Grabcut algorithm to perform foreground extraction
+          </p>
+          <a href="/grab-cut/upload-image" class="btn btn-primary">Go</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Row Number 2 -->
+  <div class="row mt-3">
+    <div class="col-lg-4 col-md-6 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Smoothen</h5>
+          <p class="card-text">This smoothens your image.</p>
+          <a href="/smoothen/upload-image" class="btn btn-primary">Go</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Edge Detection</h5>
+          <p class="card-text">We use canny edge detection.</p>
+          <a href="/edge-detection/upload-image" class="btn btn-primary">Go</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Image Erosion</h5>
+          <p class="card-text">
+            It is a type of morphological image transformation.
+          </p>
+          <a href="/image-erosion/upload-image" class="btn btn-primary">Go</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

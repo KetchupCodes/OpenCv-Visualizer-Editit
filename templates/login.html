@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{%block head%}
+<link  href= "{{ url_for('static',filename='css/signin.css') }}" type= "text/css" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/base.css') }}"/>
+{%endblock%}
+
+{% block body %}
+
+<h3 class="text-white bg-danger mb-3 mx-auto" style="max-width: 18rem;text-align:center;">{{info}}</h3>
+  
+
+
+<main class="form-signin text-center">
+  <form action = "/login" method="post">
+   <a href="/"> <img class="mb-4 rounded"  src="{{ url_for('static',filename='css/photos/logozoom.png') }}" alt="" width="200" ></a>
+    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+    <div class="form-floating">
+      <input type="text" class="form-control" id="floatingInput" placeholder="userid" name="username">
+      <label for="floatingInput">User ID</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
+      <label for="floatingPassword">Password</label>
+    </div>
+
+   
+    <button class="w-100 btn btn-lg btn-primary mb-2 " type="submit">Sign in</button>
+    <a href="/sign-up" > Register</a>
+    <p class="mt-5 mb-3 text-muted">©2021</p>
+  </form>
+</main>
+{% endblock %}
